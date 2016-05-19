@@ -1,0 +1,14 @@
+<head>
+  <title>Joakenpo</title>
+</head>
+
+<body ng-app="joakenpo">
+  <h1>Joakenpo</h1>
+  <div ng-controller="MainCtrl">
+    <ul>
+      <li ng-repeat="person in list">{{person.name}}</li>
+    </ul>
+    <input ng-model="p.name" type="text" placeholder="Name" autofocus>
+    <button ng-click="add(p)">Adicionar</button>
+  </div>
+</body>
