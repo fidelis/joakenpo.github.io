@@ -1,14 +1,23 @@
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>Joakenpo</title>
 </head>
 
 <body ng-app="joakenpo">
-  <h1>Joakenpo</h1>
-  <div ng-controller="MainCtrl">
-    <ul>
-      <li ng-repeat="person in list">{{person.name}}</li>
-    </ul>
-    <input ng-model="p.name" type="text" placeholder="Name" autofocus>
-    <button ng-click="add(p)">Adicionar</button>
-  </div>
+  <ion-pane>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">jankenpo</h1>
+    </ion-header-bar>
+    <ion-content class="padding has-footer" ng-controller="MainCtrl">
+      <div class="row responsive-sm">
+        <img class="button col col-33" on-tap="onChoose('pedra')" ng-src="images/pedra.jpg" />
+        <img class="button col col-33" on-tap="onChoose('papel')" ng-src="images/papel.jpg" />
+        <img class="button col col-33" on-tap="onChoose('tesoura')" ng-src="images/tesoura.jpg" />
+      </div>
+      <ion-footer-bar class="bar-positive">
+        <h2 align-title="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMy Score {{myScore}} -- Machine Score {{machineScore}} !</h2>
+      </ion-footer-bar>
+    </ion-content>
+  </ion-pane>
 </body>

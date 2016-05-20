@@ -1,1 +1,10 @@
 /* CSS declarations go here */
+.loss-popup .popup {
+    background-color: red;
+}
+.win-popup .popup {
+    background-color: green;
+}
+.draw-popup .popup {
+    background-color: yellow;
+}
